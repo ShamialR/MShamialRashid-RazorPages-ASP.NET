@@ -1,0 +1,129 @@
+﻿@page
+@model CinemaCritique.Pages.UpcomingModel
+@{
+    ViewData["Title"] = "Upcoming Movies";
+}
+
+<html>
+
+<head>
+    <title>Cinema Critique </title>
+    <!-- FavIcon of the website(the icon in the tab of the browser)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- script used to hide typewriter effect-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<!-- body of the page, loads doDate script when the page is run -->
+<body onload="doDate()">
+
+    <!-- loads a seperate page which contains the navbar-->
+    <div id="header"></div>
+
+    <!--Breadcrumb links for how to get to this page through a site map-->
+    <div class="breadCrumbBG">
+        <ul class="breadcrumb">
+            <li><a href="Homepage.html"><div class="rightarrow"></div>Homepage<div class="rightarrow"></div></a></li>
+            <li>Upcoming Movies</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="typewriter">
+            <h1>Cinema Critique.</h1>
+            <!-- hide the typewriter effect till h1 is completed-->
+            <h2 id="hide">Upcoming Movies.</h2>
+        </div>
+    </div>
+
+    <div class="lightBG">
+        <div class="Title">Movies Coming Soon</div>
+        <div class="BorderBottom"></div>
+    </div>
+    <a href="https://www.rottentomatoes.com/m/the_kings_man">
+        <div class="darkBG">
+            <div class="IMGRight">
+                <img src="Images/TheKingsMan.jpg" width="150" height="250">
+            </div>
+            <div class="CPLayout">
+                <div class="Title">The King's Man</div>
+                <p>Aaron Taylor-Johnson, Stanley Tucci<br><br>Synopsis:<br>As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them. Discover the origins of the very first independent intelligence agency in THE KING'S MAN, directed by Matthew Vaughn, coming to theaters August 2021<br>In Theaters 20th August.</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.rottentomatoes.com/m/venom_let_there_be_carnage">
+        <div class="lightBG">
+            <div class="IMGRight">
+                <img src="Images/Venom.jpg" width="150" height="250">
+            </div>
+
+            <div class="CPLayout">
+
+                <div class="Title">Venom 2: Let There Be Carnage</div>
+                <p>Tom Hardy, Woody Harrelson<br><br>Synopsis:<br>Sequel to the 2018 film `Venom' where Venom battles the evil Carnage.<br>In Theaters 25th June 2021.</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.rottentomatoes.com/m/ghostbusters_afterlife">
+        <div class="darkBG">
+            <div class="IMGRight">
+                <img src="Images/ghostbusters.jpg" width="150" height="250">
+            </div>
+            <div class="CPLayout">
+
+                <div class="Title">Ghostbusters: Afterlife</div>
+                <p>
+                    Bill Murray, Finn Wolfhard<br><br>Synopsis:<br>When a single mother and her two children move to a new town, they soon discover that they have a connection to the original Ghostbusters and their grandfather's secret legacy.
+                    In Theaters Nov 12 2021.
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.rottentomatoes.com/m/f9">
+        <div class="lightBG">
+            <div class="IMGRight">
+                <img src="Images/F9.jpg" width="150" height="250">
+            </div>
+            <div class="CPLayout">
+
+                <div class="Title">Fast & Furious 9</div>
+                <p>Vin Diesal, John Cena<br><br>Synopsis:<br>Dominic Toretto and his crew join forces to battle the most skilled assassin and high-performance driver they've ever encountered -- his forsaken brother.<br>In Theaters Apr 1st 2021.</p>
+            </div>
+        </div>
+    </a>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>
+
+<script>
+    window.onload = function () {
+        document.getElementById("hide").style.display = "none";
+    };
+
+    setTimeout(function () {
+        document.getElementById("hide").style.display = "block";
+    }, 7000);
+
+    function doDate() {
+        var str = "";
+
+        var days = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+        var now = new Date();
+
+        str += "Today is: " + days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        document.getElementById("todaysDate").innerHTML = str;
+    }
+    setInterval(doDate, 1000);
+</script>

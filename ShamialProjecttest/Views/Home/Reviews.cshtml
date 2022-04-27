@@ -1,0 +1,223 @@
+﻿@{
+    ViewData["Title"] = "Reviews";
+}
+
+<html>
+
+<head>
+    <title>Cinema Critique </title>
+    <!-- FavIcon of the website(the icon in the tab of the browser)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- script used to hide typewriter effect-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<!-- body of the page, loads doDate script when the page is run -->
+<body onload="doDate()">
+
+    <!-- loads a seperate page which contains the navbar-->
+    <div id="header"></div>
+
+    <!--Breadcrumb links for how to get to this page through a site map-->
+    <div class="breadCrumbBG">
+        <ul class="breadcrumb">
+            <li><a href="Homepage.html"><div class="rightarrow"></div>Homepage<div class="rightarrow"></div></a></li>
+            <li>Reviews</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="typewriter">
+            <h1>Cinema Critique.</h1>
+            <!-- hide the typewriter effect till h1 is completed-->
+            <h2 id="hide">Reviews.</h2>
+        </div>
+    </div>
+
+    <div class="lightBG">
+        <div class="Title">Recent Movie Reviews!</div>
+        <div class="BorderBottom"></div>
+
+        <div class="Title2">Movie Reviews</div>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a movie..">
+        <ul id="myUL">
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/Avengers" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Avengers Endgame<br><br></h4>
+                            <img src="Images/Avengers-Endgame.jpg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/Avatar" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Avatar<br><br></h4>
+                            <img src="Images/Avatar.jpg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/Titanic" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Titanic<br><br></h4>
+                            <img src="Images/Titanic2.jpg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/BTFTM" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Bill & Ted Face The Music<br><br></h4>
+                            <img src="Images/BTFTM.jpg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/WW84" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Wonder Woman 1984<br><br></h4>
+                            <img src="Images/WW84.jpg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="RPBG">
+                    <a asp-page="/SWROS" style="cursor: pointer;">
+                        <div class="RPImages">
+                            <h4>Star Wars: The Rise Of Skywalker<br><br></h4>
+                            <img src="Images/SWROS.jpeg" width="180" height="270" style="border-style:solid;border-width:2px;">
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="darkBG">
+        <div class="Title2">Recent Movie Reviews</div>
+        <div class="BorderBottom"></div>
+        <div class="RPBG2">
+            <a asp-page="/Titanic" style="cursor: pointer;">
+                <div class="RPImages2">
+                    <div class="MovieInfoBelow">
+                        <img src="Images/Titanic2.jpg" width="100" height="180">
+                    </div>
+                    <br>
+                    <h4>Movie 1</h4>
+                    <p style="padding-left:0px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </a>
+        </div>
+        <br>
+        <div class="RPBG2">
+            <a asp-page="/Titanic" style="cursor: pointer;">
+                <div class="RPImages2">
+                    <div class="MovieInfoBelow">
+                        <img src="Images/Titanic2.jpg" width="100" height="180">
+                    </div>
+                    <br>
+                    <h4>Movie 1</h4>
+                    <p style="padding-left:0px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </a>
+        </div>
+        <br>
+        <div class="RPBG2">
+            <a asp-page="/Titanic" style="cursor: pointer;">
+                <div class="RPImages2">
+                    <div class="MovieInfoBelow">
+                        <img src="Images/Titanic2.jpg" width="100" height="180">
+                    </div>
+                    <br>
+                    <h4>Movie 1</h4>
+                    <p style="padding-left:0px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </a>
+        </div>
+        <br>
+        <div class="RPBG2">
+            <a asp-page="/Titanic" style="cursor: pointer;">
+                <div class="RPImages2">
+                    <div class="MovieInfoBelow">
+                        <img src="Images/Titanic2.jpg" width="100" height="180">
+                    </div>
+                    <br>
+                    <h4>Movie 1</h4>
+                    <p style="padding-left:0px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </a>
+        </div>
+        <br>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>
+
+
+<script>
+    window.onload = function () {
+        document.getElementById("hide").style.display = "none";
+    };
+
+    setTimeout(function () {
+        document.getElementById("hide").style.display = "block";
+    }, 7000);
+
+    function doDate() {
+        var str = "";
+
+        var days = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+        var now = new Date();
+
+        str += "Today is: " + days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        document.getElementById("todaysDate").innerHTML = str;
+    }
+    setInterval(doDate, 1000);
+
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>

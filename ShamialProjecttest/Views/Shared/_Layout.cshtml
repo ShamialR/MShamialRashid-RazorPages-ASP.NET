@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShamialProjecttest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="example1">
+            <h3>Reviews of the latest movies and tv-shows! Currently Over 3 Reviews on Cinema Critique!</h3>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+
+                <div class="navbar">
+                    <img src="Images/logo.png" class="NavLogo" float:left width="65" height="65">
+                    <p class="NavTitle">Cinema Critique</p>
+                    <a asp-page="/Index">Homepage</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    <a asp-page="/Reviews">Reviews</a>
+                    <a asp-page="/Recent">News</a>
+                    <a asp-page="/Upcoming">Upcoming Movies</a>
+                    <a asp-page="/About">About Us</a>
+                    <a asp-page="/Contact">Contact Us</a>
+                    <partial name="_LoginPartial" />
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - CinemaCritique - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+    <div class="footer-main">
+        <div class="footer-social">
+            <ul>
+                <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-menu-one">
+            <ul>
+                <li><a asp-page="/Index">Homepage</a></li>
+                <li><a asp-page="/Upcoming">Upcoming Movies</a></li>
+                <li><a asp-page="/Reviews">Movie Reviews</a></li>
+                <li><a asp-page="/Recent">Recent Movie News</a></li>
+                <li><a asp-page="/About">About Us</a></li>
+                <li><a asp-page="/Contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Email Me at: <a href="mailto:Shamial_r@hotmail.com?Subject=Cinema%20Critique" target="_top">Shamial_r@hotmail.com</a></p>
+        <p id="todaysDate" style="text-align:right;"></p>
+    </div>
+</body>
+</html>
